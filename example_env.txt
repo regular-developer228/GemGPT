@@ -1,0 +1,2 @@
+SECRET_DJANGO_KEY='your django secret key here'
+OPENAI_API_KEY='your OpenAI api key here'

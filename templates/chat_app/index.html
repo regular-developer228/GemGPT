@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GemGPT</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>GemGPT</h1>
+
+    <div id="chat">
+        {% for msg in messages %}
+            <div class="msg {{ msg.role }}">{{ msg.content }}</div>
+        {% endfor %}
+    </div>
+
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="Write something..." autocomplete="off" required>
+        <button type="submit" id="send-btn">Send</button>
+        <button type="button" id="clear">Clear</button>
+    </form>
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>
